@@ -3,6 +3,7 @@ FROM ubuntu:latest
 WORKDIR git
 RUN apt update -y
 RUN apt upgrade -y
+RUN apt install -y micro bat git git-flow curl
 RUN git clone https://github.com/JGuilhermeSN/easywallet/
 RUN curl -fsSL https://code-server.dev/install.sh | sh
 COPY config.yaml /root/.config/code-server/config.yaml
