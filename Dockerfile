@@ -7,7 +7,6 @@ RUN apt install -y micro bat git git-flow curl
 RUN git clone https://github.com/JGuilhermeSN/easywallet/
 RUN curl -fsSL https://code-server.dev/install.sh | sh
 COPY config.yaml /root/.config/code-server/config.yaml
-COPY config.yaml /root/.config/code-server/config.yaml
 RUN code-server --install-extension eamodio.gitlens
 RUN code-server --install-extension PKief.material-icon-theme
 RUN code-server --install-extension naumovs.color-highlight
